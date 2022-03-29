@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Taptap</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bebas+Neue&family=Shizuru&display=swap" rel="stylesheet">
+    
+</head>
+<body onload="clearContainer()">
+<div class="fs-sticky-container">
+    <nav class="main-navigator">
+        <h1 class="main-navigator-logo" href="#">Taptap</h1>
+        <div class="main-navigator-right-float">
+            <a class="main-navigator-opt"> About </a>
+            <a class="main-navigator-opt"> Contact </a>
+            <a class="main-navigator-opt"> Terms </a>
+            <a class="main-navigator-opt"> Source code </a>
+        </div>
+        <div class="main-navigator-mobile" id="hamburgerhtml">
+            <span id="hotdogkekw"></span>
+            <span id="hotdogkekw"></span>
+            <span id="hotdogkekw"></span>
+        </div>
+        <div class="main-navigator-mobile-list">
+            <a class="main-navigator-opt-list"> About </a>
+            <a class="main-navigator-opt-list"> Contact </a>
+            <a class="main-navigator-opt-list"> Terms </a>
+            <a class="main-navigator-opt-list"> Source code </a>
+        </div>
+    </nav>
+    <div class="main-content"><h1 class="main-navigator-logo addLogoMain"> TapTap </h1></div>
+    <h4 class="main-desc-text"> Welcome to the <a class="highlighter">TapTap project</a>, 
+        which is my first simple web application. Here you 
+        can play a clicker game and compete with others. The 
+        whole thing is friendly UI and wide responsiveness that I 
+        learned while creating this project. The whole game is based on <a class="highlighter">JavaScript.</a> 
+        Unfortunately, <a class="highlighter">your progress is not saved</a>. Have a nice game! ~ 
+        Sallciq
+        <br>
+        <br>
+        TapTap is free 
+        to use and edit! You can download source 
+        code, at <a class="highlighter">"Source Code"</a> section in 
+        navbar.</h4>
+    <button class="main-button-seemore" id="seemore">See more</button>
+    </div>
+<div class="info-container">
+    <div class="fill-element"></div> <!-- This element just fix -margin of info-container -->
+    <div class="slider">
+        <img alt="" id="fadeinIMG" class="slider-img" src="assets/anonymity.png"/>
+        <img alt="" class="slider-img" src="assets/paddlock.png"/>
+        <img alt="" id="fadeoutIMG" class="slider-img" src="assets/game.png"/>
+    </div>
+    <div class="slider-buttons-container"> 
+        <li class="dot" id="dot1"></li>
+        <li class="dot" id="dot2"></li>
+        <li class="dot" id="dot3"></li>
+    </div>
+</div>    
+<div class="secondpage-ui">
+    <div class="shop-container-hidden">
+        <div class="grid-shop-elements">
+            <p> SHOP </p>
+            <div class="shop-container-product ">
+                <div class="shop-img-product-container"><img alt="" src="/assets/upgradetappertap.png"/></div>
+                <div class="container-button-shop">
+                    <button class="shop-button-buy " id="upgradeperclick">BUY</button>
+                    <p>cost: <a id="costupgradeperclick">10</a></p>
+                </div>
+                <p class="shop-desc-product">There you can upgrade your per mine earnings. 
+                    Basically you start with 1 TapCoin$ on mine. Actually you get <a style="color: #94d889; font-weight: 600;" id="earningshopinfo">1</a> TapCoin$ per mine!</p>  
+                </p>
+            </div>
+
+            <div class="shop-container-product ">
+                <div class="shop-img-product-container"><img alt="" src="/assets/upgradepercentagepertap.png"/></div>
+                <div class="container-button-shop">
+                <button class="shop-button-buy " id="upgradepercentage">BUY</button>
+                <p>cost: <a id="costupgradepercentage">5</a></p>
+                </div>
+                <p class="shop-desc-product">There you can upgrade your percentage to mine a TapCoin$. Basically you have 3%. Actually you get <a style="color: #89b4d8; font-weight: 600;" id="percentageshopinfo">3</a><a style="color: #89b4d8; font-weight: 600;">%</a> to mine a TapCoin$!</p>
+            </div>
+
+            <div class="shop-container-product">
+                <div class="shop-img-product-container"><img alt="" class="shop-img-product" src="/assets/upgradesoon.png"/></div>
+                <button class="shop-button-buy" id="upgrade">BUY</button>
+                <p class="shop-desc-product"> More upgrades in next updates!</p>
+            </div>
+            <p> Your TapCoin$ balance: <a id="moneyshopcount">0 :(</a> </p>
+        </div> 
+        <div class="shop-content-hidden"> <!-- content shop -->
+            <i class="shop-close-button" id="closebuttonshop">X</i>
+        </div>
+    </div>
+    <div class="ui-container">
+        <div class="user-login">
+                <img class="user-profile-pic" src="assets/585e4bf3cb11b227491c339a.png"/>
+                <a class="nickname-txt nickname-txt-widthfixer">@<input class="nickname-txt input-invisible" value="YourName"></input></a>
+        </div>
+        <div class="money-wrapper">
+            <a type="text" value="0" class="ui-money" id="money">0</a>
+            <div class="money-type"><a class="money-id">TapCoin$</a></div>
+        </div>
+ 
+        <div class="flex-wrapper"> 
+        <output type="text" value="./logs ..." class="ui-console1" id="userconsole">
+            <div class="log-wrapper" id="logcontainer">
+                <!-- there will be logs -->
+            </div>
+        </output>
+        <div class="responsive-fix-container">
+            <output type="text" value="click" class="ui-console2" id="clicker">
+            <button class="buttonclicker" id="clicker">MINE
+                <div class="buttonclickerbef"></div>
+            </button>
+            </output>
+            <output type="text" value="info" class="ui-console3">
+                <div class="statholder-wrapper" id="statistic">       
+                    <li class="statholder" id="DROPPERMINE"></li>
+                    <li class="statholder" id="USERDROPCHANCE"></li>
+                    <li class="statholder" id="BALANCE"></li>
+                    <li class="statholder" id="TOTALCLICKS"></li>
+                    <li class="statholder" id="PROCESSNUMBER"></li>
+                </div>
+            </output>
+        </div>
+    </div>
+    </div>
+    <div class="shop-container">
+        <p class="small-text"> Click to open a shop!</p>
+        <button id="shopbutton"> store </button>
+    </div>
+</div>
+<footer class="footer-main"> 
+    <p style="margin-left: 10px;"> made by <a style="margin-left: 3px; margin-right: 10px;" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/profile.php?id=100014322582448">@Sallciq</a > | 2022 All rights reserved® |<p>
+    <a style="margin-left: 10px;" rel="noopener noreferrer" target="_blank" href="https://github.com/Sallciq"> github </a>    
+    </a>
+</footer>
+
+
+<script src="./main.js"></script>
+<script src="./autofixplgn.js"></script>
+<script src="./mine.js"></script>
+</body>
+</html>
+
+
+<!-- ###################################### -->
+<!--             BY SALLCIQ                 -->
+<!--        FIRST Release 28.03.2022        -->
+<!-- ###################################### -->
